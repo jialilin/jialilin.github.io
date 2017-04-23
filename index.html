@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>林佳丽</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<link href="http://fonts.useso.com/css?family=Lato:400,500,600,700|Open+Sans:400,500,600,700" rel="stylesheet" type="text/css">
+	<style>
+		.clear-margin {
+			margin: 0;
+		}
+		
+		.space-top {
+			margin-top: 10px;
+		}
+		
+		.space-right {
+			margin-right: 10px;
+		}
+		
+		.icon-left {
+			margin-right: 5px;
+		}
+		
+		.icon-right {
+			margin-left: 5px;
+		}
+		
+		.labels {
+			word-spacing: 5px;
+			line-height: 2;
+		}
+		
+		.label-keyword {
+			display: inline-block;
+			background: #7eb0db;
+			color: white;
+			font-size: 0.9em;
+			padding: 5px;
+			border: 1px solid #357ebd;
+		}
+		
+		.link-disguise {
+			color: inherit;
+		}
+		
+		.link-disguise:hover {
+			color: inherit;
+		}
+		
+		@media (max-width: 992px) {
+			.clear-margin-sm {
+				margin-bottom: 0;
+			}
+		}
+		
+		body {
+			font-family: 'Lato', "Helvetica Neue", Helvetica, Arial, sans-serif;
+			background: #f0f0f0;
+			color: #333333;
+			font-size: 16px;
+		}
+		
+		.text-bolder {
+			font-weight: bold;
+		}
+		
+		@media only screen {
+			.container {
+				max-width: 50em;
+			}
+		}
+		
+		@media (max-width: 480px) {
+			ul {
+				padding-left: 25px;
+			}
+			.background-details {
+				display: block;
+			}
+			.background-details .icon {
+				max-width: inherit;
+				min-width: inherit;
+				text-align: left;
+			}
+			.background-details .icon,
+			.background-details .info {
+				display: block;
+				padding: 10px 0;
+			}
+			.background-details .title {
+				display: none;
+			}
+			.card-nested {
+				padding: 5px 0;
+			}
+		}
+		
+		.profile-card {
+			display: table;
+			width: 100%;
+		}
+		
+		.profile-pic {
+			display: table-cell;
+			vertical-align: top;
+			padding: 1rem 4rem 0 0;
+		}
+		
+		.profile-pic img {
+			width: 100px;
+			height: 100px;
+		}
+		
+		.contact-details {
+			display: table-cell;
+		}
+		
+		.contact-details .detail {
+			display: inline-block;
+			line-height: 2;
+			margin-right: 2rem;
+		}
+		
+		.contact-details .detail .icon {
+			padding-right: 7px;
+			color: #888;
+		}
+		
+		.contact-details .detail .info {
+			font-size: 0.8em;
+		}
+		
+		.social-links {
+			line-height: 2.5;
+		}
+		
+		.social-link {
+			display: block;
+		}
+		
+		.social-link span {
+			display: inline-block;
+			vertical-align: middle;
+		}
+		
+		.social-link:hover,
+		.social-link:focus {
+			text-decoration: none;
+		}
+		
+		.social-link .fa {
+			text-align: center;
+			width: 2em;
+		}
+		
+		.fa-github {
+			color: #454545;
+		}
+		
+		.fa-github:hover,
+		.fa-github:focus {
+			text-decoration: none;
+			color: #2b2b2b;
+		}
+		
+		.fa-twitter {
+			color: #33ccff;
+		}
+		
+		.fa-twitter:hover,
+		.fa-twitter:focus {
+			text-decoration: none;
+			color: #00bfff;
+		}
+		
+		.fa-rss {
+			color: #f36f24;
+		}
+		
+		.fa-rss:hover,
+		.fa-rss:focus {
+			text-decoration: none;
+			color: #d8560c;
+		}
+		
+		.fa-linkedin {
+			color: #007bb6;
+		}
+		
+		.fa-linkedin:hover,
+		.fa-linkedin:focus {
+			text-decoration: none;
+			color: #005983;
+		}
+		
+		.fa-skype {
+			color: #12a5f4;
+		}
+		
+		.fa-skype:hover,
+		.fa-skype:focus {
+			text-decoration: none;
+			color: #0986ca;
+		}
+		
+		.fa-stack-overflow {
+			color: #8e8e92;
+		}
+		
+		.fa-stack-overflow:hover,
+		.fa-stack-overflow:focus {
+			text-decoration: none;
+			color: #747479;
+		}
+		
+		.fa-soundcloud {
+			color: #e8822d;
+		}
+		
+		.fa-soundcloud:hover,
+		.fa-soundcloud:focus {
+			text-decoration: none;
+			color: #cc6916;
+		}
+		
+		.fa-pinterest {
+			color: #bd091f;
+		}
+		
+		.fa-pinterest:hover,
+		.fa-pinterest:focus {
+			text-decoration: none;
+			color: #8c0717;
+		}
+		
+		.fa-vimeo {
+			color: #17b3e8;
+		}
+		
+		.fa-vimeo:hover,
+		.fa-vimeo:focus {
+			text-decoration: none;
+			color: #128fba;
+		}
+		
+		.fa-behance {
+			color: #2c98cf;
+		}
+		
+		.fa-behance:hover,
+		.fa-behance:focus {
+			text-decoration: none;
+			color: #2379a5;
+		}
+		
+		.fa-codepen {
+			color: #1c1c1c;
+		}
+		
+		.fa-codepen:hover,
+		.fa-codepen:focus {
+			text-decoration: none;
+			color: #020202;
+		}
+		
+		.fa-foursquare {
+			color: #fa4778;
+		}
+		
+		.fa-foursquare:hover,
+		.fa-foursquare:focus {
+			text-decoration: none;
+			color: #f91554;
+		}
+		
+		.fa-reddit {
+			color: #545454;
+		}
+		
+		.fa-reddit:hover,
+		.fa-reddit:focus {
+			text-decoration: none;
+			color: #3b3b3b;
+		}
+		
+		.fa-spotify {
+			color: #acd200;
+		}
+		
+		.fa-spotify:hover,
+		.fa-spotify:focus {
+			text-decoration: none;
+			color: #829f00;
+		}
+		
+		.fa-dribbble {
+			color: #ce366f;
+		}
+		
+		.fa-dribbble:hover,
+		.fa-dribbble:focus {
+			text-decoration: none;
+			color: #a82959;
+		}
+		
+		.fa-facebook {
+			color: #4b6daa;
+		}
+		
+		.fa-facebook:hover,
+		.fa-facebook:focus {
+			text-decoration: none;
+			color: #3b5687;
+		}
+		
+		.fa-angellist {
+			color: #000000;
+		}
+		
+		.fa-angellist:hover,
+		.fa-angellist:focus {
+			text-decoration: none;
+			color: #000000;
+		}
+		
+		.fa-bitbucket {
+			color: #205081;
+		}
+		
+		.fa-bitbucket:hover,
+		.fa-bitbucket:focus {
+			text-decoration: none;
+			color: #163758;
+		}
+		
+		.fa-google-plus {
+			color: #bf2a1d;
+		}
+		
+		.fa-google-plus:hover,
+		.fa-google-plus:focus {
+			text-decoration: none;
+			color: #932016;
+		}
+		
+		.background-card h4 {
+			font-variant: small-caps;
+			color: #777777;
+			border-bottom: 1px solid #eeeeee;
+			padding-bottom: 1em;
+			margin-bottom: 1em;
+			line-height: 1.2;
+		}
+		
+		.background-card h4:not(:first-child) {
+			margin-top: 2em;
+		}
+		
+		h4>.fa,
+		h4>.title {
+			display: inline-block;
+			vertical-align: baseline;
+		}
+		
+		h4>.fa {
+			width: 4rem;
+		}
+		
+		.content {
+			line-height: 1.5;
+		}
+		
+		.card {
+			background: #ffffff;
+			border: 1px solid #e6e6e6;
+			border-radius: 3px;
+			padding: 2em 3.5em;
+		}
+		
+		.card-nested {
+			padding: 1.5rem 0 1.5rem 4.2rem;
+		}
+		
+		.card-wrapper {
+			padding: 5px;
+		}
+		
+		.enumeration:not(:last-child):after {
+			content: ", ";
+		}
+		
+		.enumeration:last-child:after {
+			content: ".";
+		}
+		
+		@media only screen and (max-width: 768px) {
+			.profile-card {
+				display: block;
+			}
+			.contact-details,
+			.profile-pic {
+				display: block;
+				text-align: center;
+			}
+			.card-nested {
+				padding-left: 0;
+			}
+		}
+		
+		@media only screen and (max-width: 480px) {
+			.contact-details .detail {
+				display: block;
+			}
+		}
+		
+		.card-skills {
+			position: relative;
+		}
+		
+		.skill-info {
+			margin-left: 20px;
+		}
+		
+		@media only screen and (min-width: 768px) {
+			.skill {
+				border-left: 9px solid #555555;
+			}
+			.skill.beginner {
+				height: 50%;
+				border-color: #e74c3c;
+			}
+			.skill.intermediate {
+				height: 70%;
+				border-color: #f1c40f;
+			}
+			.skill.advanced {
+				border-color: #5cb85c;
+			}
+			.skill.master {
+				border-color: black;
+			}
+		}
+		
+		@media (max-width: 768px) {
+			.quote {
+				font-size: inherit;
+			}
+		}
+		
+		@media print {
+			body {
+				font-size: 10pt;
+			}
+			a[href]:after {
+				content: none!important;
+			}
+			.pagebreak {
+				page-break-before: always;
+			}
+			.background-card h4:not(:first-child) {
+				margin-top: 0!important;
+			}
+			.card {
+				border: 0;
+				padding: 0;
+			}
+			.container {
+				max-width: 100%;
+				width: 100%;
+			}
+			.contact-details .detail .icon {
+				color: #888!important;
+			}
+			.background-card h4 {
+				padding-bottom: 0.5em;
+				margin-bottom: 0.5em;
+				margin-top: 1em!important;
+			}
+			h4>.fa {
+				display: none!important;
+			}
+			.card-nested {
+				padding: .5rem 0 .5rem 0;
+			}
+			.labels {
+				display: inline;
+			}
+			.skill-info {
+				margin-left: 0;
+			}
+			blockquote {
+				font-size: 100%;
+			}
+		}
+	</style>
+</head>
+
+<body itemscope="" itemtype="http://schema.org/Person">
+	<div class="container">
+		<section class="row">
+			<div class="card-wrapper">
+				<div class="card">
+					<div class="profile-card">
+						<div class="profile-pic">
+							<img class="media-object img-circle center-block" data-src="holder.js/100x100" alt="Richard Hendriks" src="index_files/9acdb04e603c1cac2b893190f6dd5911.jpg"
+							 itemprop="image">
+						</div>
+						<div class="contact-details">
+							<div class="name-and-profession">
+								<h3 class="text-bolder name" itemprop="name">林佳丽</h3>
+								<h5 class="text-muted" itemprop="jobTitle">产品经理</h5>
+							</div>
+							<div class="detail">
+								<span class="icon">
+<i class="fa fa-lg fa-envelope"></i>
+</span>
+								<span class="info">
+<a href="mailto:richard.hendriks@mail.com" class="link-disguise" itemprop="email">linjiali77@163.com</a>
+</span>
+							</div>
+							<div class="detail">
+								<span class="icon">
+<i class="fa fa-lg fa-phone"></i>
+</span>
+								<a href="tel://%28912%29%20555-4321" class="link-disguise info" itemprop="telephone">
+(86) 134-3070-2996
+</a>
+							</div>
+							<div class="detail">
+								<span class="icon">
+<i class="fa fa-lg fa-map-marker"></i>
+</span>
+								<span class="info">
+深圳市, 南山区
+</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="row">
+			<div class="card-wrapper">
+				<div class="card background-card">
+					<h4 id="about"> <span class="fa fa-lg fa-user"></span> <span class="title">自我介绍</span> </h4>
+					<div class="card-nested" itemprop="description">
+						<p> 本人性格开朗乐观，为人诚恳，能与各种性格的人融洽相处，喜欢学习。工作时认真严谨负责任，玩耍时认真不谈工作。座右铭是：阳光总在风雨后，我相信有彩虹。 </p>
+					</div>
+					<h4 id="education"><span class="fa fa-lg fa-mortar-board"></span> <span class="title">教育经历</span></h4>
+					<ul class="list-unstyled">
+						<li class="card-nested">
+							<div class="content has-sidebar">
+								<p class="clear-margin-sm">
+									<strong>本科学士学位, 日语系</strong>,&nbsp; 惠州学院
+								</p>
+								<p class="text-muted">
+									<small>Step 2010 - June 2012</small>
+								</p>
+							</div>
+						</li>
+					</ul>
+					<ul class="list-unstyled">
+						<li class="card-nested">
+							<div class="content has-sidebar">
+								<p class="clear-margin-sm">
+									<strong>本科学士学位, 日语系</strong>,&nbsp; 北海道文教大学
+								</p>
+								<p class="text-muted">
+									<small>April 2012 - Mar 2015</small>
+								</p>
+							</div>
+						</li>
+					</ul>
+					<h4 id="references"><span class="fa fa-lg fa-thumbs-up"></span> <span class="title">专业资格</span> </h4>
+					<ul class="list-unstyled">
+						<li class="card-nested">
+							<div class="space-top labels">
+									<span class="label label-keyword">日本语能力测试（JLPT）一级</span> <span class="label label-keyword">英语六级</span>
+									<span class="label label-keyword">计算机一级</span> <span class="label label-keyword">英语托业750分</span>
+							</div>
+						</li>
+					</ul>
+					<h4 id="awards"><span class="fa fa-lg fa-trophy"></span> <span class="title">获奖情况</span></h4>
+					<ul class="list-unstyled">
+						<li class="card-nested">
+							<div class="content has-sidebar">
+								<p class="clear-margin-sm" itemprop="award">
+									<strong>惠州学院自律会年度优秀委员</strong> <small class="text-muted"> Nov 2011 </small>
+								</p>
+								<p class="clear-margin-sm" itemprop="award">
+									<strong>日本国家奖学金（年度GPA3.8）</strong> <small class="text-muted"> Nov 2013 </small>
+								</p>
+							</div>
+						</li>
+					</ul>
+					<h4 id="work-experience"> <span class="fa fa-lg fa-pencil-square-o"></span> <span class="title">工作经历</span> </h4>
+					<ul class="list-unstyled">
+						<li class="card-nested">
+							<div class="content has-sidebar">
+								<p class="clear-margin-sm">
+									<strong>产品经理</strong>,
+									<a href="http://piedpiper.com/" target="_blank">百度国际科技（深圳）有限公司</a>
+								</p>
+								<p class="text-muted">
+									<small>
+										<span class="space-right"> June 2015 - June 2017 </span>
+										<span> <i class="fa fa-clock-o icon-left"></i> 2 years </span>
+									</small>
+								</p>
+								<p>在该公司的国际化产品部日文输入法Simeji团队担任日语产品经理助理，主要负责语音功能项目，安卓及iOS前端产品设计，曾负责后端精度改进，Stamp功能优化等。熟练office（word，excel，PPT），xmind，sketch，Axture等工具的操作。</p>
+								<ul>
+									<strong>1.语音功能项目</strong>
+									<li>在日本第三方输入法中排名第一的Simeji输入法中加入人工智能语音功能，预期培养日本用户的语音使用习惯并给用户带来更好的输入体验。</li>
+									<li>角色：项目负责人，协调跨团队的沟通，跟进前端的界面设计，模型训练数据的安排准备以及推动项目的进展。</li>
+									<li>数据：目前项目进展：模型训练基本完成，字准为85%以上，继续优化后预计4月末上线。</li>
+								</ul>
+								<br/>
+								<ul>
+									<strong>2.前端产品设计</strong>
+									<p/>
+									<p><strong>(1) 资源型驱动沉睡老用户激活</strong></p>
+									<li>利用常驻浮层banner，针对未把Simeji设为默认输入法的用户，通过消息推送引导用户进入Simeji容器页面，把Simeji设为默认输入法。</li>
+									<li>效果：点击CTR约34%。从banner进入成功设置simeji为默认比例约92%左右，较之前版本提升22%。</li>
+									<p/>
+									<p><strong>(2)键盘功能优化（颜文字绘文字增加编辑功能）</strong></p>
+									<li>根据用户多次反馈及用户访谈，确认用户对颜文字和绘文字的收藏页面存在较强的编辑需求，对此设计了编辑功能，提高了用户体验，完善了功能的退场机制。</li>
+									<p/>
+									<p><strong>(3)皮肤配置平台制作项目</strong></p>
+									<li>梳理安卓各种皮肤配置流程及样本，跨团队提出皮肤的自动化配置平台需求，最终实现了各类皮肤的自动化配置，解放了部分人力。</li>
+								</ul>
+								<br/>
+								<ul>
+									<strong>3.后端精度</strong>
+									<p/>
+									<p><strong>(1) 在本地词典中加入twitter语料</strong></p>
+									<li>效果：新语料模型首选率高于旧语料模型0.2%左右。可以成功解决大约70%的旧语料模型中被用户反馈的关于整句变换的bad case，并且几乎没有引入新的badcase。</li>
+									<p/>
+									<p><strong>(2)实时更新词典</strong></p>
+									<li>在客户端设计可随时通过服务器下发更新特定读音下展现词条的功能，及时解决用户反馈的badcase，更新运营相关词条，热点词条。</li>
+									<li>实现了不发版也可以解决线上变换相关badcase并及时更新运营词条，提高用户体验，降低解决badcase的成本。</li>
+									<li>效果：iOS第一版热更新辞书中的词条上屏点展比约为77.8%。</li>
+									<p/>
+									<p><strong>(3)UGC（用户贡献词条自动审核平台）设置过滤机制</strong></p>
+									<li>增加UGC的资源敏感内容的过滤机制，去除用户审查平台出现账号等个人信息的词条，防止个人信息问题被放大化。</li>
+								</ul>
+								<ul>
+									<strong>4.外部apk-ASO项目，颜文字绘文字运营方向负责人</strong>
+									<p/>
+									<p><strong>(1) 颜文字apk功能</strong></p>
+									<li>负责点：功能运营，键盘运营。每周主题选定，推广及与日本同事沟通。</li>
+									<li>目前上线31款颜文字apk。CTR>30%。neko颜文字推荐位全量上线后首日下载过万，一周累计下载约3万，个性化榜单排行第1，GP总榜排行第75。</li>
+									<p/>
+									<p><strong>(2)辞书外部apk功能</strong></p>
+									<li>目前上线了3款apk。CTR为20%左右。单款外部apk当前日均新增下载约在600左右，累计安装量3500以上。</li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+					<h4 id="skills"> <span class="fa fa-lg fa-code"></span> <span class="title">技能</span> </h4>
+					<ul class="list-unstyled">
+						<div class="space-top labels">
+							<span class="label label-keyword">Word</span> <span class="label label-keyword">Excel</span>
+							<span class="label label-keyword">PowerPoint</span> <span class="label label-keyword">xmind</span>
+							<span class="label label-keyword">sketch</span> <span class="label label-keyword">Axture</span>
+						</div>
+					</ul>
+					<h4 id="volunteer-work"><span class="fa fa-lg fa-child"></span> <span class="title">社会实践经历</span> </h4>
+					<ul class="list-unstyled">
+						<li class="card-nested">
+							<div class="content has-sidebar">
+								<p class="clear-margin-sm">
+									<strong>保安検査</strong>,&nbsp; セノン千歳支社
+								</p>
+								<p class="text-muted">
+									<small>july 2012 - Mar 2014</small>
+								</p>
+								<p>主要是检查登机旅客的机票，协助安检以及充当警备员及机场中北海道警察的中英文翻译。</p>
+							</div>
+							<div class="content has-sidebar">
+								<p class="clear-margin-sm">
+									<strong>中文美容顾问</strong>,&nbsp; 资生堂北海道支社
+								</p>
+								<p class="text-muted">
+									<small>May 2014 - Mar 2015</small>
+								</p>
+								<p>在マツモトキヨシ的资生堂专柜当中文顾问，内容为给客人介绍合适的化妆品以及化妆。</p>
+							</div>
+							<div class="content has-sidebar">
+								<p class="clear-margin-sm">
+									<strong>日语教师，翻译</strong>,&nbsp; 东丰企画
+								</p>
+								<p class="text-muted">
+									<small>May 2014 - Mar 2015</small>
+								</p>
+								<p>主要负责中日日中双语翻译，带劳务的中国人熟悉环境，办理居住手续，并进行日语教学。</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+	</div>
+	<script>
+		/* <![CDATA[ */(function (d, s, a, i, j, r, l, m, t) { try { l = d.getElementsByTagName('a'); t = d.createElement('textarea'); for (i = 0; l.length - i; i++) { try { a = l[i].href; s = a.indexOf('/cdn-cgi/l/email-protection'); m = a.length; if (a && s > -1 && m > 28) { j = 28 + s; s = ''; if (j < m) { r = '0x' + a.substr(j, 2) | 0; for (j += 2; j < m && a.charAt(j) != 'X'; j += 2)s += '%' + ('0' + ('0x' + a.substr(j, 2) ^ r).toString(16)).slice(-2); j++; s = decodeURIComponent(s) + a.substr(j, m - j) } t.innerHTML = s.replace(/</g, '&lt;').replace(/\>/g, '&gt;'); l[i].href = 'mailto:' + t.value } } catch (e) { } } } catch (e) { } })(document);/* ]]> */
+	</script>
+
+</body>
+
+</html>
